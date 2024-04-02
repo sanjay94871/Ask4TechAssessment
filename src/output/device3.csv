@@ -1,0 +1,4 @@
+Interface,"IP Address","MAC Address"
+enp3s0,10.50.245.40,fc:aa:14:6d:39:ae
+virbr0,192.168.122.1,52:54:00:e7:dd:dc
+virbr1,192.168.125.1,52:54:00:12:0d:4a

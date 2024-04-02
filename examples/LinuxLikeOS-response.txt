@@ -1,0 +1,17 @@
+1: enp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether fc:aa:14:6d:39:ae brd ff:ff:ff:ff:ff:ff
+    inet 10.50.245.40/24 brd 10.50.245.255 scope global dynamic enp3s0
+       valid_lft 30401sec preferred_lft 30401sec
+2: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:e7:dd:dc brd ff:ff:ff:ff:ff:ff
+    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+       valid_lft forever preferred_lft forever
+3: virbr1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+    link/ether 52:54:00:12:0d:4a brd ff:ff:ff:ff:ff:ff
+    inet 192.168.125.1/24 brd 192.168.125.255 scope global virbr1
+       valid_lft forever preferred_lft forever
+
+
+
+curl -O http://us.php.net/distributions/php-8.3.4.tar.gz
+tar -xzvf php-8.3.4.tar.gz

@@ -1,0 +1,31 @@
+-- Create table for devices
+CREATE TABLE devices (
+    hostname VARCHAR(250) PRIMARY KEY,
+    device_type VARCHAR(50) NOT NULL,
+    os_type VARCHAR(50) NOT NULL,
+    model_name VARCHAR(100),
+    ram_amount INTEGER,
+    management_interface VARCHAR(50),
+    management_protocol VARCHAR(10)
+);
+
+-- Create table for network interfaces
+CREATE TABLE interfaces (
+    id SERIAL PRIMARY KEY,
+    device_hostname VARCHAR(250) REFERENCES devices(hostname),
+    interface_name VARCHAR(50),
+    mac_address VARCHAR(17),
+    ipv4_address VARCHAR(15),
+    is_management BOOLEAN,
+    UNIQUE(device_hostname, interface_name)
+);
+
+-- Create table for device connections
+CREATE TABLE connections (
+    id SERIAL PRIMARY KEY,
+    device1_hostname VARCHAR(250) REFERENCES devices(hostname),
+    device2_hostname VARCHAR(250) REFERENCES devices(hostname),
+    interface1_id INTEGER REFERENCES interfaces(id),
+    interface2_id INTEGER REFERENCES interfaces(id),
+    UNIQUE(device1_hostname, device2_hostname)
+);

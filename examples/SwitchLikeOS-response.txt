@@ -1,0 +1,8 @@
+Ethernet0/0 is up
+  Hardware is AmdP2, address is 0003.e39b.9220
+  Internet address is 10.1.0.1/24
+  MTU 1500 bytes
+GigabitEthernet0/1 is up
+  Hardware is BCM1125, address is 0015.5b46.5300
+  Internet address is 1.2.0.1/20
+  MTU 1500 bytes
