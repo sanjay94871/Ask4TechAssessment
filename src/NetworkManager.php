@@ -2,7 +2,7 @@
 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
 
-require_once 'GetManagementInt.php'; 
+require_once '$root/GetManagementInt.php'; 
 require_once "$root/OSParsers/Parser.php"; 
 require_once "$root/OSParsers/LinuxOS.php"; 
 require_once "$root/OSParsers/SwitchOS.php"; 
